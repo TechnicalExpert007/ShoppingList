@@ -17,6 +17,5 @@ The **Mobile Shopping List App** is a user-friendly application designed to help
    ionic serve
 
 
-## License
-This project is licensed under the MIT License.
+
 
