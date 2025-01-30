@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Shopping Lists</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addList()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let list of lists">
+      <ion-item [routerLink]="['/list', list.id]">
+        <ion-label>
+          <h2>{{ list.name }}</h2>
+          <p *ngIf="list.priority">Priority: {{ list.priority }}</p>
+          <p>Items: {{ list.items.length }}</p>
+        </ion-label>
+        <ion-badge slot="end" [color]="list.priority === 'High' ? 'danger' : 
+                                     list.priority === 'Medium' ? 'warning' : 'success'">
+          {{ list.priority }}
+        </ion-badge>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteList(list)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <div class="ion-text-center ion-padding" *ngIf="lists.length === 0">
+    <p>No shopping lists yet. Click the + button to create one!</p>
+  </div>
+</ion-content>
