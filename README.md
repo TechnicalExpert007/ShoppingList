@@ -8,7 +8,7 @@ The **Mobile Shopping List App** is a user-friendly application designed to help
    git clone https://github.com/TechnicalExpert007/ShoppingList.git
    
 3. Navigate to the project directory:
-   cd mobile-shopping-list
+   cd ShoppingList-main
    
 4. Install dependencies:
    npm install
