@@ -6,8 +6,8 @@ The **Mobile Shopping List App** is a user-friendly application designed to help
 ## Installation
 1. Clone the repository:
    git clone https://github.com/TechnicalExpert007/mobile-shopping-list.git
-   ```
-2. Navigate to the project directory:
+   
+3. Navigate to the project directory:
    cd mobile-shopping-list
    
 4. Install dependencies:
